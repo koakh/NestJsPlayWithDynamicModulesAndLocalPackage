@@ -2,6 +2,8 @@
 
 a simple and naife example to pass a UserService to a DynamicModule (NestJs Library)
 
+in th end the only thing that matters in this poc is the `userService: new UsersService()` and try to figure out a way to inject the userService, seems more idiomatic than create a instance of it in.....
+
 ```typescript
 @Module({
   imports: [

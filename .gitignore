@@ -33,6 +33,7 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Custom
 .bak/*.tgz
 consumerapp/dist
 consumerapp/node_modules

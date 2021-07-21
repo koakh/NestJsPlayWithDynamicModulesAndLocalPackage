@@ -19,6 +19,4 @@ As you can see, C implements I (which is not an interface, but an abstract class
 - [Inject provider in a dynamic module · Issue #2199 · nestjs/nest](https://github.com/nestjs/nest/issues/2199)
 - [NestJS Dependency Injection - Decoupling Services With Interfaces](https://jasonwhite.xyz/posts/2020/10/20/nestjs-dependency-injection-decoupling-services-with-interfaces/)
 
-
 @Bilchuck is right. I'd suggest looking at TypeOrmModule (https://github.com/nestjs/typeorm/blob/master/lib/typeorm.module.ts) - see forRootAsync() method implementation.
-
