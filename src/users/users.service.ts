@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { UserServiceAbstract } from '../config/interfaces';
+import { UserServiceAbstract } from '../config/abstracts';
 
 export type User = any;
 
@@ -29,5 +29,10 @@ export class UsersService implements UserServiceAbstract {
 
   async findOne(username: string): Promise<User | undefined> {
     return this.users.find(user => user.username === username);
+  }
+
+  async login(username: string, password: string): Promise<boolean> {
+    const findIndex = this.users.findIndex(user => user.username === username && user.password === password);
+    return findIndex >= 0;
   }
 }

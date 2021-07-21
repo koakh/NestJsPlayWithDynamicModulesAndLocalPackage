@@ -1,4 +1,5 @@
 import { DynamicModule, Module } from '@nestjs/common';
+import { ConfigController } from './config.controller';
 import { ConfigService } from './config.service';
 import { CONFIG_OPTIONS } from './constants';
 import { ConfigModuleOptions } from './interfaces';
@@ -20,6 +21,7 @@ export class ConfigModule {
         },
         // UsersService,
       ],
+      controllers: [ConfigController],
       exports: [ConfigService],
     };
   }

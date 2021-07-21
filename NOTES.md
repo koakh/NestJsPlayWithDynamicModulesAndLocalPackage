@@ -21,3 +21,4 @@ As you can see, C implements I (which is not an interface, but an abstract class
 
 
 @Bilchuck is right. I'd suggest looking at TypeOrmModule (https://github.com/nestjs/typeorm/blob/master/lib/typeorm.module.ts) - see forRootAsync() method implementation.
+

@@ -1,5 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { CONFIG_OPTIONS } from './constants';
+import { LoginDto } from './dto';
 import { ConfigModuleOptions, EnvConfig } from './interfaces';
 import { User } from './types';
 
@@ -25,7 +26,11 @@ export class ConfigService {
     return this.envConfig[key];
   }
 
-  async getUser(username: string): Promise<any> {
+  async getUser(username: string): Promise<User> {
     return await this.options.userService.findOne(username);
   }
+  
+  async login({username, password}: LoginDto): Promise<boolean> {
+    return await this.options.userService.login(username, password);
+  }  
 }
