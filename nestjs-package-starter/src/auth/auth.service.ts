@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { AUTH_OPTIONS } from './constants';
 import { LoginDto } from './dto';
-import { ConfigModuleOptions, EnvConfig } from './interfaces';
+import { AuthModuleOptions, EnvConfig } from './interfaces';
 import { User } from './types';
 
 @Injectable()
@@ -14,7 +14,7 @@ export class AuthService {
   constructor(
     // provided from ConfigModule
     @Inject(AUTH_OPTIONS)
-    private readonly options: ConfigModuleOptions,
+    private readonly options: AuthModuleOptions,
   ) {    
     const filePath = `${process.env.NODE_ENV || 'development'}.env`;
     const envFile = path.resolve(__dirname, '../../', options.config.folder, filePath);
