@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AuthService } from './auth.service';
-import { AUTH_OPTIONS } from './constants';
+import { AUTH_MODULE_OPTIONS } from './auth.constants';
 
 jest.mock('dotenv');
 jest.mock('fs');
@@ -13,7 +13,7 @@ describe('AuthService', () => {
       providers: [
         AuthService,
         {
-          provide: AUTH_OPTIONS,
+          provide: AUTH_MODULE_OPTIONS,
           useValue: {
             folder: 'config',
           },

@@ -1,5 +1,20 @@
 # NOTES
 
+try project to test dynamic modules, but fails in injecting on JwtModule
+
+## Run Project
+
+```shell
+$ cd nestjs-package-starter
+$ npm run start:dev
+
+$ cd consumerapp
+$ npm run start:debug
+Application is running on: http://[::1]:3000
+```
+
+## Links
+
 - [NestJS Dependency Injection with Abstract Classes](https://dev.to/ef/nestjs-dependency-injection-with-abstract-classes-4g65)
 
 - [Allow useClass with dynamic provider injection · Issue #4476 · nestjs/nest](https://github.com/nestjs/nest/issues/4476)

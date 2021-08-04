@@ -4,7 +4,9 @@ import { AuthService } from '@koakh/nestjs-package-starter';
 @Injectable()
 export class AppService {
 
-  constructor(private readonly authService: AuthService) {
+  constructor(
+    private readonly authService: AuthService
+  ) {
     Logger.log(this.authService.getConfigKey('HELLO_MESSAGE'), AppService.name);
   }
 

@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
-import { AUTH_OPTIONS } from './constants';
+import { AUTH_MODULE_OPTIONS } from './auth.constants';
 import { LoginDto } from './dto';
 import { AuthModuleOptions, EnvConfig } from './interfaces';
 import { User } from './types';
@@ -12,8 +12,8 @@ export class AuthService {
   private readonly envConfig: EnvConfig;
 
   constructor(
-    // provided from ConfigModule
-    @Inject(AUTH_OPTIONS)
+    // provided from AuthModule
+    @Inject(AUTH_MODULE_OPTIONS)
     private readonly options: AuthModuleOptions,
   ) {    
     const filePath = `${process.env.NODE_ENV || 'development'}.env`;
